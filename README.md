@@ -8,7 +8,7 @@ Scans random IPs on the internet looking for exposed RTSP cameras with default c
 
 ## ⚙️ How it works
 
-1. 960 threads generate random IPs and check if port 554 is open
+1. threads generate random IPs and check if port 554 is open
 2. IPs with open port are added to a queue
 3. 40 threads take IPs from the queue and test credentials
 4. Credentials are verified via raw RTSP sockets
