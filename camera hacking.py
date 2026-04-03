@@ -34,14 +34,17 @@ paths = [
 def main():
     os.system("title made by @000nico")
     os.system("mode con cols=60 lines=20")
+    
+    print("threads: ")
+    threads = int(input("threads: "))
     print("please wait...")
 
-    for _ in range(960):
+    for _ in range(threads):
         t = threading.Thread(target=findIps)
         t.daemon = True
         t.start()
 
-    for _ in range(40):
+    for _ in range(40): 
         t = threading.Thread(target=processIps)
         t.daemon = True
         t.start()
@@ -79,7 +82,6 @@ def testRtsp(ip, user, password, path):
         s.settimeout(1)
         s.connect((ip, 554))
         s.settimeout(3)
-
         s.send(f"OPTIONS rtsp://{ip}{path} RTSP/1.0\r\nCSeq: 1\r\n\r\n".encode())
         s.recv(1024).decode(errors="ignore")
 
