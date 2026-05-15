@@ -1,4 +1,4 @@
-# 📷 Camera Scanner
+# rtsp camera scanner
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![RTSP](https://img.shields.io/badge/Protocol-RTSP-green)
@@ -6,7 +6,7 @@
 
 Scans random IPs on the internet looking for exposed RTSP cameras with default credentials.
 
-## ⚙️ How it works
+## how it works
 
 1. threads generate random IPs and check if port 554 is open
 2. IPs with open port are added to a queue
@@ -15,16 +15,16 @@ Scans random IPs on the internet looking for exposed RTSP cameras with default c
 5. If credentials pass, verifies real video with OpenCV
 6. Valid streams are saved to `Desktop/cameras.txt`
 
-## 📦 Requirements
+## requirements
 ```bash
 pip install opencv-python colorama
 ```
 
-## 🚀 Usage
+## usage
 ```bash
 python scanner.py
 ```
 
-## ⚠️ Disclaimer
+## disclaimer
 
 For educational purposes only. Only use on networks you own or have explicit permission to test.
